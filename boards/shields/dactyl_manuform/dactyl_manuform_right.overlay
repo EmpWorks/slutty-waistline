@@ -1,0 +1,17 @@
+#include "dactyl_manuform.dtsi"
+
+&default_transform { // The matrix transform for this board is 5 columns over because the left half is 5 columns wide according to the matrix.
+    col-offset = <7>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&gpio1 11 GPIO_ACTIVE_HIGH> // col5 in the schematic
+        , <&gpio1 13 GPIO_ACTIVE_HIGH> // col4 in the schematic
+        , <&gpio1 6  GPIO_ACTIVE_HIGH> // col3 in the schematic
+        , <&gpio0 9 GPIO_ACTIVE_HIGH> // col2 in the schematic
+        , <&gpio1 15 GPIO_ACTIVE_HIGH> // col1 in the schematic
+        , <&gpio0 22  GPIO_ACTIVE_HIGH> // col0 in the schematic
+        , <&gpio0 24  GPIO_ACTIVE_HIGH> // col0 in the schematic
+        ;
+};
